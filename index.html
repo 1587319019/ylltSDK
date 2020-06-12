@@ -1,56 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>亚拉拉特JSSDK文档调试</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>qjnBlog</title>
+  <link rel="manifest" href="/static/manifest.json">
+
 </head>
+
 <body>
-  <h1>SDK文档调试</h1>
-  <button type="button" id="btn">发送消息</button>
-  <button type="button" id="btn2">关闭了哦</button>
-  <script src="./jyllt-1.0.0.js" type = module></script>
-  <script src="./jquery.min.js"></script>
-  <script>
-    // const $yllt = require('./jyllt-1.0.0.js');
-    import './jyllt-1.0.0.js'
-
-    $yllt.config({
-      debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-      appKey: '1212asfaasf', // 必填，企业号的唯一标识
-      timestamp: '121212', // 必填，生成签名的时间戳
-      nonceStr: '1212', // 必填，生成签名的随机串
-      signature: '1212', // 必填，签名
-      skdApiList: ['miniProgramPay', 'miniProgramShare', 'appPay', 'appShare', 'msgModal', 'msgToast'] // 必填，需要使用的JS接口列表
-    })
-    
-    // $yllt.ready(function(){
-    //   $yllt.appPay({
-    //     fail: function (res) {
-    //       console.log('appPay fail', res);
-    //     }
-    //   })
-    //   $yllt.miniProgramPay({
-    //     data: {a: '11', b: false, c: 222},
-    //     fail: function (res) {
-    //       console.log('miniProgramPay fail', res);
-    //     }
-    //   })
-    //   $yllt.appShowAll()
-    // })
-    // console.log('window.frames', window.frames);
-    
-   $('#btn').on('click', function(){
-     console.log('开启了哦', window.top.location.href);
-     $yllt.msgModal.show();
-   })
-
-   $('#btn2').on('click', function(){
-     console.log('关闭了哦', window.top.location.href);
-     $yllt.msgModal.hide();
-     
-   })
-
-  </script>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
 </body>
+
+<script>
+//    if ('serviceWorker' in navigator) {
+//     navigator.serviceWorker.register('/service-worker.js').then(() => {
+//       console.log('Service worker registered!');
+//     }).catch((error) => {
+//       console.log('Error registering service worker: ', error);
+//     });
+//   } else {
+//     console.log('Not supported by browser');
+//   }
+  document.write('<script type="text/html" color="160,32,240" opacity=\'1\' zIndex="-10" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"><\/script>');
+</script>
+
 </html>
