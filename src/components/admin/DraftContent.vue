@@ -102,6 +102,6 @@ export default {
   margin-bottom: 30px;
 }
 .detail-content {
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 </style>
